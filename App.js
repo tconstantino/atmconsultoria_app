@@ -8,21 +8,15 @@
 
 import React from 'react';
 import {
-  SafeAreaView,
   StyleSheet,
-  ScrollView,
-  View,
-  Text,
-  StatusBar,
 } from 'react-native';
-import BarraNavegacao from './src/components/barra-navegacao';
+import TelaPrincipal from './src/components/tela-principal';
+import TelaCliente from './src/components/tela-cliente';
 
 const App: () => React$Node = () => {
   return (
-    <View>
-        <StatusBar backgroundColor='#CCC' barStyle='dark-content'></StatusBar>
-      <BarraNavegacao></BarraNavegacao>
-    </View>
+    // <TelaPrincipal></TelaPrincipal>
+    <TelaCliente></TelaCliente>
   );
 };
 

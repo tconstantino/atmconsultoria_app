@@ -12,7 +12,9 @@ import React, { Component } from 'react';
    Text,
    View,
    Platform,
+   Image,
  } from 'react-native';
+ import BotaoVoltarImg from '../imgs/btn_voltar.png';
  
 class BarraNavegacao extends Component {
   constructor(props) {
@@ -23,6 +25,7 @@ class BarraNavegacao extends Component {
     return (
       <View style={styles.barraTitulo}>
         <Text style={styles.textoTitulo}>ATM Consultoria</Text>
+        <Image style={styles.botaoVoltar} source={BotaoVoltarImg}></Image>
       </View>
     );
   };
@@ -32,16 +35,19 @@ class BarraNavegacao extends Component {
 const styles = StyleSheet.create({
   barraTitulo: {
     backgroundColor: '#CCC',
-    paddingTop: Platform.OS === 'ios' ? 65 : 10,
-    height: Platform.OS === 'ios' ? 130 : 60,
+    paddingTop: Platform.OS === 'ios' ? 55 : 10,
+    height: Platform.OS === 'ios' ? 150 : 110,
   },
   textoTitulo: {
-    fontSize: 18,
+    fontSize: 25,
     fontWeight: 'bold',
     color: 'black',
     flex: 1,
     textAlign: 'center',
-  }
+  },
+  botaoVoltar: {
+    margin: 15,
+  },
 });
  
  export default BarraNavegacao;
