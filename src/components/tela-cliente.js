@@ -28,32 +28,42 @@ class TelaCliente extends Component {
   render() {
     return (
         <View>
-            <StatusBar backgroundColor='#CCC' barStyle='dark-content'></StatusBar>
-            <BarraNavegacao></BarraNavegacao>
-            <Image source={DetalheClienteImg}></Image>
-            <Text>Nossos Clientes</Text>
-            <Image source={Cliente1Img}></Image>
-            <Text>Cliente 1, do ramo A de negócios, desde 1980</Text>
-            <Image source={Cliente2Img}></Image>
-            <Text>Cliente 2, do ramo B de negócios, desde 1995</Text>
+            <StatusBar backgroundColor='#b9c941' barStyle='dark-content'></StatusBar>
+            <BarraNavegacao cor='#b9c941'></BarraNavegacao>
+            <View style={styles.topo}>
+                <Image source={DetalheClienteImg}></Image>
+                <Text style={styles.titulo}>Nossos Clientes</Text>
+            </View>
+            <View style={styles.detalheCliente}>
+                <Image source={Cliente1Img}></Image>
+                <Text style={styles.textoCliente}>Cliente 1, do ramo A de negócios, desde 1980</Text>
+            </View>
+            <View style={styles.detalheCliente}>
+                <Image source={Cliente2Img}></Image>
+                <Text style={styles.textoCliente}>Cliente 2, do ramo B de negócios, desde 1995</Text>    
+            </View>
         </View>
     );
   };
 }
  
 const styles = StyleSheet.create({
-    agrupadorImagens: {
-        alignItems: 'center',
-        paddingTop: 30,
-    },
-    menuBotoes: {
+    topo: {
         flexDirection: 'row',
+        margin: 15,
+        alignItems: 'center'
     },
-    logo: {
-        marginBottom: 30,
+    titulo: {
+        color: '#b9c941',
+        fontSize: 30,
+        fontWeight: 'bold',
+        marginLeft: 10,
     },
-    imagem: {
-        margin: 18,
+    detalheCliente: {
+        margin: 20,
+    },
+    textoCliente: {
+        fontSize: 17,
     },
 });
  

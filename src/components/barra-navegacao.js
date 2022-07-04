@@ -13,6 +13,7 @@ import React, { Component } from 'react';
    View,
    Platform,
    Image,
+   TouchableHighlight,
  } from 'react-native';
  import BotaoVoltarImg from '../imgs/btn_voltar.png';
  
@@ -23,9 +24,15 @@ class BarraNavegacao extends Component {
 
   render() {
     return (
-      <View style={styles.barraTitulo}>
+      <View style={{
+        backgroundColor: this.props.cor || '#ccc',
+        paddingTop: Platform.OS === 'ios' ? 55 : 10,
+        height: Platform.OS === 'ios' ? 150 : 110,
+      }}>
         <Text style={styles.textoTitulo}>ATM Consultoria</Text>
-        <Image style={styles.botaoVoltar} source={BotaoVoltarImg}></Image>
+        <TouchableHighlight onPress={() => {}} hidden={!this.props.voltar}>
+          <Image style={styles.botaoVoltar} source={BotaoVoltarImg}></Image>
+        </TouchableHighlight>
       </View>
     );
   };
@@ -34,7 +41,7 @@ class BarraNavegacao extends Component {
  
 const styles = StyleSheet.create({
   barraTitulo: {
-    backgroundColor: '#CCC',
+    backgroundColor: '#ccc',
     paddingTop: Platform.OS === 'ios' ? 55 : 10,
     height: Platform.OS === 'ios' ? 150 : 110,
   },

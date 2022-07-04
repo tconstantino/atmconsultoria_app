@@ -12,6 +12,7 @@
    View,
    Image,
    StatusBar,
+   TouchableHighlight,
  } from 'react-native';
  import BarraNavegacao from './barra-navegacao';
 
@@ -34,12 +35,20 @@ class TelaPrincipal extends Component {
             <View style={styles.agrupadorImagens}>
                 <Image style={styles.logo} source={LogoImg}></Image>
                 <View style={styles.menuBotoes}>
-                    <Image style={styles.imagem} source={MenuClienteImg}></Image>
-                    <Image style={styles.imagem} source={MenuContatoImg}></Image>
+                    <TouchableHighlight onPress={() => {}}>
+                        <Image style={styles.imagem} source={MenuClienteImg}></Image>
+                    </TouchableHighlight>
+                    <TouchableHighlight onPress={() => {}}>
+                        <Image style={styles.imagem} source={MenuContatoImg}></Image>
+                    </TouchableHighlight>    
                 </View>
                 <View style={styles.menuBotoes}>
-                    <Image style={styles.imagem} source={MenuEmpresaImg}></Image>
-                    <Image style={styles.imagem} source={MenuServicoImg}></Image>
+                    <TouchableHighlight onPress={() => {}}>
+                        <Image style={styles.imagem} source={MenuEmpresaImg}></Image>
+                    </TouchableHighlight>
+                    <TouchableHighlight onPress={() => {}}>
+                        <Image style={styles.imagem} source={MenuServicoImg}></Image>
+                    </TouchableHighlight>
                 </View>
             </View>
         </View>

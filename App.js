@@ -10,13 +10,21 @@ import React from 'react';
 import {
   StyleSheet,
 } from 'react-native';
+// import { NavigationContainer } from '@react-navigation/native';
+// import { createStackNavigator } from '@react-navigation/stack';
 import TelaPrincipal from './src/components/tela-principal';
 import TelaCliente from './src/components/tela-cliente';
+import TelaContato from './src/components/tela-contato';
+import TelaEmpresa from './src/components/tela-empresa';
+
+// const StackNavigator = createStackNavigator();
 
 const App: () => React$Node = () => {
   return (
     // <TelaPrincipal></TelaPrincipal>
-    <TelaCliente></TelaCliente>
+    // <TelaCliente></TelaCliente>
+    // <TelaContato></TelaContato>
+    <TelaEmpresa></TelaEmpresa>
   );
 };
 
