@@ -19,7 +19,8 @@
 import DetalheClienteImg from '../imgs/detalhe_cliente.png';
 import Cliente1Img from '../imgs/cliente1.png';
 import Cliente2Img from '../imgs/cliente2.png';
- 
+const corFundo = '#b9c941';
+
 class TelaCliente extends Component {
   constructor(props) {
     super(props);
@@ -28,8 +29,8 @@ class TelaCliente extends Component {
   render() {
     return (
         <View>
-            <StatusBar backgroundColor='#b9c941' barStyle='dark-content'></StatusBar>
-            <BarraNavegacao cor='#b9c941'></BarraNavegacao>
+            <StatusBar backgroundColor={corFundo} barStyle='dark-content'></StatusBar>
+            <BarraNavegacao cor={corFundo} voltar></BarraNavegacao>
             <View style={styles.topo}>
                 <Image source={DetalheClienteImg}></Image>
                 <Text style={styles.titulo}>Nossos Clientes</Text>
@@ -54,7 +55,7 @@ const styles = StyleSheet.create({
         alignItems: 'center'
     },
     titulo: {
-        color: '#b9c941',
+        color: corFundo,
         fontSize: 30,
         fontWeight: 'bold',
         marginLeft: 10,
@@ -64,6 +65,7 @@ const styles = StyleSheet.create({
     },
     textoCliente: {
         fontSize: 17,
+        fontWeight: 'bold',
     },
 });
  

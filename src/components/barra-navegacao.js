@@ -24,15 +24,13 @@ class BarraNavegacao extends Component {
 
   render() {
     return (
-      <View style={{
-        backgroundColor: this.props.cor || '#ccc',
-        paddingTop: Platform.OS === 'ios' ? 55 : 10,
-        height: Platform.OS === 'ios' ? 150 : 110,
-      }}>
+      <View style={[styles.barraTitulo, {backgroundColor: this.props.cor || '#ccc'}]}>
         <Text style={styles.textoTitulo}>ATM Consultoria</Text>
-        <TouchableHighlight onPress={() => {}} hidden={!this.props.voltar}>
-          <Image style={styles.botaoVoltar} source={BotaoVoltarImg}></Image>
-        </TouchableHighlight>
+        { this.props.voltar ?
+          <TouchableHighlight onPress={() => {}} hidden={!this.props.voltar}>
+            <Image style={styles.botaoVoltar} source={BotaoVoltarImg}></Image>
+          </TouchableHighlight>
+          : null }
       </View>
     );
   };
@@ -41,7 +39,6 @@ class BarraNavegacao extends Component {
  
 const styles = StyleSheet.create({
   barraTitulo: {
-    backgroundColor: '#ccc',
     paddingTop: Platform.OS === 'ios' ? 55 : 10,
     height: Platform.OS === 'ios' ? 150 : 110,
   },

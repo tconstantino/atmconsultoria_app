@@ -22,11 +22,11 @@ import TelaServicos from './src/components/tela-servicos';
 
 const App: () => React$Node = () => {
   return (
-    // <TelaPrincipal></TelaPrincipal>
+    <TelaPrincipal></TelaPrincipal>
     // <TelaCliente></TelaCliente>
     // <TelaContato></TelaContato>
     // <TelaEmpresa></TelaEmpresa>
-    <TelaServicos></TelaServicos>
+    // <TelaServicos></TelaServicos>
   );
 };
 
