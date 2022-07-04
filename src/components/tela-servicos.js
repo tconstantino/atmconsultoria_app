@@ -6,20 +6,21 @@
  * @flow strict-local
  */
 
-import React, { Component } from 'react';
-import {
+ import React, { Component } from 'react';
+ import {
    StyleSheet,
    View,
    Image,
    StatusBar,
    Text,
    Linking
-} from 'react-native';
-import BarraNavegacao from './barra-navegacao';
-import DetalheEmpresaImg from '../imgs/detalhe_empresa.png';
-const corFundo = '#ec7148';
+ } from 'react-native';
+ import BarraNavegacao from './barra-navegacao';
 
-class TelaEmpresa extends Component {
+import DetalheServicoImg from '../imgs/detalhe_servico.png';
+const corFundo = '#19d1c8';
+ 
+class TelaServicos extends Component {
   constructor(props) {
     super(props);
   }
@@ -30,16 +31,14 @@ class TelaEmpresa extends Component {
             <StatusBar backgroundColor={corFundo} barStyle='dark-content'></StatusBar>
             <BarraNavegacao voltar cor={corFundo}></BarraNavegacao>
             <View style={styles.topo}>
-                <Image source={DetalheEmpresaImg}></Image>
-                <Text style={styles.titulo}>A Empresa</Text>
+                <Image source={DetalheServicoImg}></Image>
+                <Text style={styles.titulo}>Nossos Serviços</Text>
             </View>
-            <View style={styles.detalheEmpresa}>
-                <Text style={styles.textoEmpresa}>Atuando no mercado desde a década de 80, fornecendo sempre o melhor atendimento e os melhores serviços para nossos parceiros. Conheça mais nossos <Text 
-                    style={{color: 'blue'}}
-                    onPress={() => {}}>
-                        clientes
-                    </Text>.
-                </Text>
+            <View style={styles.detalheServicos}>
+                <Text style={styles.textoServicos}>- Consultoria</Text>
+                <Text style={styles.textoServicos}>- Processos</Text>
+                <Text style={styles.textoServicos}>- Acompanhamento de Projetos</Text>
+                <Text style={styles.textoServicos}>- Recursos Humanos</Text>
             </View>
         </View>
     );
@@ -58,10 +57,10 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         marginLeft: 10,
     },
-    detalheEmpresa: {
+    detalheServicos: {
         margin: 20,
     },
-    textoEmpresa: {
+    textoServicos: {
         textAlign: 'justify',
         fontSize: 17,
         fontWeight: 'bold',
@@ -69,5 +68,5 @@ const styles = StyleSheet.create({
     },
 });
  
- export default TelaEmpresa;
+ export default TelaServicos;
  

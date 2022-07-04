@@ -6,18 +6,18 @@
  * @flow strict-local
  */
 
- import React, { Component } from 'react';
- import {
-   StyleSheet,
-   View,
-   Image,
-   StatusBar,
-   Text,
- } from 'react-native';
- import BarraNavegacao from './barra-navegacao';
-
+import React, { Component } from 'react';
+import {
+    StyleSheet,
+    View,
+    Image,
+    StatusBar,
+Text,
+} from 'react-native';
+import BarraNavegacao from './barra-navegacao';
 import DetalheContatoImg from '../imgs/detalhe_contato.png';
- 
+const corFundo = '#61bd8c';
+
 class TelaContato extends Component {
   constructor(props) {
     super(props);
@@ -26,8 +26,8 @@ class TelaContato extends Component {
   render() {
     return (
         <View>
-            <StatusBar backgroundColor='#61bd8c' barStyle='dark-content'></StatusBar>
-            <BarraNavegacao voltar cor='#61bd8c'></BarraNavegacao>
+            <StatusBar backgroundColor={corFundo} barStyle='dark-content'></StatusBar>
+            <BarraNavegacao voltar cor={corFundo}></BarraNavegacao>
             <View style={styles.topo}>
                 <Image source={DetalheContatoImg}></Image>
                 <Text style={styles.titulo}>Contato</Text>
@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
         alignItems: 'center'
     },
     titulo: {
-        color: '#61bd8c',
+        color: corFundo,
         fontSize: 30,
         fontWeight: 'bold',
         marginLeft: 10,

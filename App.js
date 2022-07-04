@@ -16,6 +16,7 @@ import TelaPrincipal from './src/components/tela-principal';
 import TelaCliente from './src/components/tela-cliente';
 import TelaContato from './src/components/tela-contato';
 import TelaEmpresa from './src/components/tela-empresa';
+import TelaServicos from './src/components/tela-servicos';
 
 // const StackNavigator = createStackNavigator();
 
@@ -24,7 +25,8 @@ const App: () => React$Node = () => {
     // <TelaPrincipal></TelaPrincipal>
     // <TelaCliente></TelaCliente>
     // <TelaContato></TelaContato>
-    <TelaEmpresa></TelaEmpresa>
+    // <TelaEmpresa></TelaEmpresa>
+    <TelaServicos></TelaServicos>
   );
 };
 
