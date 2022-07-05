@@ -28,9 +28,9 @@ class TelaCliente extends Component {
 
   render() {
     return (
-        <View>
+        <View style={{backgroundColor: 'white', flex: 1}}>
             <StatusBar backgroundColor={corFundo} barStyle='dark-content'></StatusBar>
-            <BarraNavegacao cor={corFundo} voltar></BarraNavegacao>
+            <BarraNavegacao cor={corFundo} voltar navigation={this.props.navigation}></BarraNavegacao>
             <View style={styles.topo}>
                 <Image source={DetalheClienteImg}></Image>
                 <Text style={styles.titulo}>Nossos Clientes</Text>

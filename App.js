@@ -10,23 +10,27 @@ import React from 'react';
 import {
   StyleSheet,
 } from 'react-native';
-// import { NavigationContainer } from '@react-navigation/native';
-// import { createStackNavigator } from '@react-navigation/stack';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 import TelaPrincipal from './src/components/tela-principal';
 import TelaCliente from './src/components/tela-cliente';
 import TelaContato from './src/components/tela-contato';
 import TelaEmpresa from './src/components/tela-empresa';
 import TelaServicos from './src/components/tela-servicos';
 
-// const StackNavigator = createStackNavigator();
+const StackNavigator = createStackNavigator();
 
 const App: () => React$Node = () => {
   return (
-    <TelaPrincipal></TelaPrincipal>
-    // <TelaCliente></TelaCliente>
-    // <TelaContato></TelaContato>
-    // <TelaEmpresa></TelaEmpresa>
-    // <TelaServicos></TelaServicos>
+    <NavigationContainer>
+      <StackNavigator.Navigator screenOptions={{headerShown: false}}>
+        <StackNavigator.Screen name='TelaPrincipal' component={TelaPrincipal} />
+        <StackNavigator.Screen name='TelaCliente' component={TelaCliente} />
+        <StackNavigator.Screen name='TelaContato' component={TelaContato} />
+        <StackNavigator.Screen name='TelaEmpresa' component={TelaEmpresa} />
+        <StackNavigator.Screen name='TelaServicos' component={TelaEmpresa} />
+      </StackNavigator.Navigator>
+    </NavigationContainer>
   );
 };
 

@@ -26,9 +26,9 @@ class TelaEmpresa extends Component {
 
   render() {
     return (
-        <View>
+        <View style={{backgroundColor: 'white', flex: 1}}>
             <StatusBar backgroundColor={corFundo} barStyle='dark-content'></StatusBar>
-            <BarraNavegacao voltar cor={corFundo}></BarraNavegacao>
+            <BarraNavegacao voltar cor={corFundo} navigation={this.props.navigation}></BarraNavegacao>
             <View style={styles.topo}>
                 <Image source={DetalheEmpresaImg}></Image>
                 <Text style={styles.titulo}>A Empresa</Text>
@@ -36,7 +36,7 @@ class TelaEmpresa extends Component {
             <View style={styles.detalheEmpresa}>
                 <Text style={styles.textoEmpresa}>Atuando no mercado desde a década de 80, fornecendo sempre o melhor atendimento e os melhores serviços para nossos parceiros. Conheça mais nossos <Text 
                     style={{color: 'blue'}}
-                    onPress={() => {}}>
+                    onPress={() => this.props.navigation.navigate('TelaCliente')}>
                         clientes
                     </Text>.
                 </Text>

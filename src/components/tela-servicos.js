@@ -27,9 +27,9 @@ class TelaServicos extends Component {
 
   render() {
     return (
-        <View>
+        <View style={{backgroundColor: 'white', flex: 1}}>
             <StatusBar backgroundColor={corFundo} barStyle='dark-content'></StatusBar>
-            <BarraNavegacao voltar cor={corFundo}></BarraNavegacao>
+            <BarraNavegacao voltar cor={corFundo} navigation={this.props.navigation}></BarraNavegacao>
             <View style={styles.topo}>
                 <Image source={DetalheServicoImg}></Image>
                 <Text style={styles.titulo}>Nossos Serviços</Text>

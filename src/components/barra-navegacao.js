@@ -27,7 +27,7 @@ class BarraNavegacao extends Component {
       <View style={[styles.barraTitulo, {backgroundColor: this.props.cor || '#ccc'}]}>
         <Text style={styles.textoTitulo}>ATM Consultoria</Text>
         { this.props.voltar ?
-          <TouchableHighlight onPress={() => {}} hidden={!this.props.voltar}>
+          <TouchableHighlight onPress={() => this.props.navigation.navigate('TelaPrincipal')}>
             <Image style={styles.botaoVoltar} source={BotaoVoltarImg}></Image>
           </TouchableHighlight>
           : null }

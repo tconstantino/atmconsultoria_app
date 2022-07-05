@@ -29,24 +29,24 @@ class TelaPrincipal extends Component {
 
   render() {
     return (
-        <View>
+        <View style={{backgroundColor: 'white', flex: 1}}>
             <StatusBar backgroundColor='#CCC' barStyle='dark-content'></StatusBar>
-            <BarraNavegacao></BarraNavegacao>
+            <BarraNavegacao navigation={this.props.navigation}></BarraNavegacao>
             <View style={styles.agrupadorImagens}>
                 <Image style={styles.logo} source={LogoImg}></Image>
                 <View style={styles.menuBotoes}>
-                    <TouchableHighlight onPress={() => {}}>
+                    <TouchableHighlight onPress={() => this.props.navigation.navigate('TelaCliente')}>
                         <Image style={styles.imagem} source={MenuClienteImg}></Image>
                     </TouchableHighlight>
-                    <TouchableHighlight onPress={() => {}}>
+                    <TouchableHighlight onPress={() => this.props.navigation.navigate('TelaContato')}>
                         <Image style={styles.imagem} source={MenuContatoImg}></Image>
                     </TouchableHighlight>    
                 </View>
                 <View style={styles.menuBotoes}>
-                    <TouchableHighlight onPress={() => {}}>
+                    <TouchableHighlight onPress={() => this.props.navigation.navigate('TelaEmpresa')}>
                         <Image style={styles.imagem} source={MenuEmpresaImg}></Image>
                     </TouchableHighlight>
-                    <TouchableHighlight onPress={() => {}}>
+                    <TouchableHighlight onPress={() => this.props.navigation.navigate('TelaServicos')}>
                         <Image style={styles.imagem} source={MenuServicoImg}></Image>
                     </TouchableHighlight>
                 </View>
