@@ -35,18 +35,30 @@ class TelaPrincipal extends Component {
             <View style={styles.agrupadorImagens}>
                 <Image style={styles.logo} source={LogoImg}></Image>
                 <View style={styles.menuBotoes}>
-                    <TouchableHighlight onPress={() => this.props.navigation.navigate('TelaCliente')}>
+                    <TouchableHighlight 
+                        onPress={() => this.props.navigation.navigate('TelaCliente')}
+                        underlayColor={'white'}
+                        activeOpacity={0.5}>
                         <Image style={styles.imagem} source={MenuClienteImg}></Image>
                     </TouchableHighlight>
-                    <TouchableHighlight onPress={() => this.props.navigation.navigate('TelaContato')}>
+                    <TouchableHighlight
+                        onPress={() => this.props.navigation.navigate('TelaContato')}
+                        underlayColor={'white'}
+                        activeOpacity={0.5}>
                         <Image style={styles.imagem} source={MenuContatoImg}></Image>
                     </TouchableHighlight>    
                 </View>
                 <View style={styles.menuBotoes}>
-                    <TouchableHighlight onPress={() => this.props.navigation.navigate('TelaEmpresa')}>
+                    <TouchableHighlight
+                        onPress={() => this.props.navigation.navigate('TelaEmpresa')}
+                        underlayColor={'white'}
+                        activeOpacity={0.5}>
                         <Image style={styles.imagem} source={MenuEmpresaImg}></Image>
                     </TouchableHighlight>
-                    <TouchableHighlight onPress={() => this.props.navigation.navigate('TelaServicos')}>
+                    <TouchableHighlight
+                        onPress={() => this.props.navigation.navigate('TelaServicos')}
+                        underlayColor={'white'}
+                        activeOpacity={0.5}>
                         <Image style={styles.imagem} source={MenuServicoImg}></Image>
                     </TouchableHighlight>
                 </View>

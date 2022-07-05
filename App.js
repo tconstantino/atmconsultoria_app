@@ -28,7 +28,7 @@ const App: () => React$Node = () => {
         <StackNavigator.Screen name='TelaCliente' component={TelaCliente} />
         <StackNavigator.Screen name='TelaContato' component={TelaContato} />
         <StackNavigator.Screen name='TelaEmpresa' component={TelaEmpresa} />
-        <StackNavigator.Screen name='TelaServicos' component={TelaEmpresa} />
+        <StackNavigator.Screen name='TelaServicos' component={TelaServicos} />
       </StackNavigator.Navigator>
     </NavigationContainer>
   );
